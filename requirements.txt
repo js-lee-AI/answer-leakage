@@ -1,0 +1,34 @@
+# Verified against Python 3.11.
+
+# The correctness-critical dependency. math_verify decides which generated chains
+# pass the keep-correct filter and which evaluation answers score as correct, so it
+# is pinned to an exact version rather than a floor: a different version silently
+# changes which chains enter the training corpora. Do not relax this pin.
+math-verify==0.9.0
+sympy==1.14.0
+
+# Generation and evaluation
+vllm==0.15.1
+transformers==4.57.6
+datasets==4.5.0
+
+# Training
+torch==2.9.1
+trl==0.28.0
+deepspeed==0.18.6
+accelerate==1.12.0
+
+# Analysis and figures
+numpy==2.2.6
+scipy==1.17.0
+matplotlib==3.10.8
+
+# Optional: --wandb logging in train_sft.py. Training does not need wandb, and
+# nothing here installs it. If you do install it, use 0.27.2 or newer: trl 0.28
+# fails to import its SFT trainer against wandb 0.25.x
+# ("cannot import name 'Imports' from wandb.proto.wandb_telemetry_pb2").
+# wandb==0.27.2
+
+# Optional: --use_liger in train_sft.py (fused linear cross-entropy, lower memory,
+# numerically equivalent)
+# liger-kernel==0.8.0

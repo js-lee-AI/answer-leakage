@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+# run artifacts
+outputs/
+runs/
+checkpoints/
+wandb/
+*.log
+
+# generated chains, matched corpora, evaluation records
+data/
+eval_results/
+*.jsonl
+
+.DS_Store
+.ipynb_checkpoints/
+
+# keep README figure assets (the ignore rules above must not swallow them)
+!assets/
+!assets/*.png
+
+.omc/
+.claude/
