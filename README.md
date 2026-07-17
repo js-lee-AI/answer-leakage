@@ -6,7 +6,7 @@
 
 <em>Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models</em>
 
-[![arXiv](https://img.shields.io/badge/arXiv-TBD-lightgrey.svg)](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.14552-b31b1b.svg)](https://arxiv.org/abs/2607.14552)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](#citation)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
@@ -24,7 +24,7 @@
 
 ## News
 
-- **2026-07** · Paper posted to arXiv, and the method code is public here.
+- **2026-07** · Paper posted to arXiv at [2607.14552](https://arxiv.org/abs/2607.14552), and the method code is public here.
 
 ## Overview
 
@@ -191,16 +191,14 @@ This is the main experiment only. The controls, the code-domain arm and the cros
 
 ## Citation
 
-The arXiv identifier is not assigned yet. **This BibTeX entry is a placeholder: replace `eprint`, the `TBD` fields, and the year once the paper is announced.**
-
 ```bibtex
 @article{lee2026answerleakage,
   title   = {Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning
              Distillation in Large Language Models},
   author  = {Lee, Jungseob and Lee, Seungyoon and Son, Suhyune and
              Lee, Dongyub Jude and Han, Sungbin and Eo, Sugyeong and Lim, Heuiseok},
-  journal = {arXiv preprint arXiv:TBD},
-  eprint  = {TBD},
+  journal = {arXiv preprint arXiv:2607.14552},
+  eprint  = {2607.14552},
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   year    = {2026}
