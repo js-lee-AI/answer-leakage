@@ -1,6 +1,8 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+build/
+dist/
 .venv/
 venv/
 .env
@@ -21,6 +23,6 @@ eval_results/
 .DS_Store
 .ipynb_checkpoints/
 
-# keep README figure assets (the ignore rules above must not swallow them)
+# the rules above must not swallow the README figure
 !assets/
 !assets/*.png

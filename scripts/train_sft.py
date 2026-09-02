@@ -1,4 +1,4 @@
-
+"""Full-parameter SFT. One recipe for every arm; only --data_path changes."""
 import argparse
 import json
 import os
@@ -50,7 +50,7 @@ def parse_args():
                         help="skip the final/ save. ZeRO-3 parameter gather on save can "
                              "hang on short runs; evaluate the last checkpoint-N instead")
     parser.add_argument("--wandb", action="store_true", help="log to Weights & Biases")
-    parser.add_argument("--wandb_project", type=str, default="answer-leakage")
+    parser.add_argument("--wandb_project", type=str, default="glance")
     return parser.parse_args()
 
 
@@ -61,6 +61,7 @@ def load_data(data_path: str):
     return ds
 
 
+# thinking-preserving templates; the stock DeepSeek/GLM templates drop the think block
 DEEPSEEK_R1_TRAIN_TEMPLATE = (
     "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}"
     "{{bos_token}}"

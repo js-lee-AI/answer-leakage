@@ -1,4 +1,4 @@
-
+"""MATH-500 evaluation in thinking mode (temp 0.6, top-p 0.95, top-k 20)."""
 import argparse
 import json
 from collections import defaultdict
