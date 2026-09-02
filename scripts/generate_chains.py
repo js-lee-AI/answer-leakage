@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from glance import (CONDITIONS, build_prompt, load_engine, load_problems,
+from answer_leakage import (CONDITIONS, build_prompt, load_engine, load_problems,
                     sample_chains, write_jsonl)
 
 

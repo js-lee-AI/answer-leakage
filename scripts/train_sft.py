@@ -50,7 +50,7 @@ def parse_args():
                         help="skip the final/ save. ZeRO-3 parameter gather on save can "
                              "hang on short runs; evaluate the last checkpoint-N instead")
     parser.add_argument("--wandb", action="store_true", help="log to Weights & Biases")
-    parser.add_argument("--wandb_project", type=str, default="glance")
+    parser.add_argument("--wandb_project", type=str, default="answer_leakage")
     return parser.parse_args()
 
 

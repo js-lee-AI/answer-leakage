@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from glance import match_arms
+from answer_leakage import match_arms
 
 
 def main():

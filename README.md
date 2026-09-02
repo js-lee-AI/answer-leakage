@@ -51,7 +51,7 @@ This repository is that measurement as a library, plus the code for the main exp
 pip install -e .
 ```
 
-Scoring a corpus needs nothing but the standard library, so the base install is empty on purpose and `import glance` works anywhere.
+Scoring a corpus needs nothing but the standard library, so the base install is empty on purpose and `import answer_leakage` works anywhere.
 
 Two extras cover the parts that need heavy dependencies:
 
@@ -70,7 +70,7 @@ Gated checkpoints such as Qwen need `huggingface-cli login`. The paper's runs us
 The penalty costs two fine-tunes to measure. `dAFR` costs one generation pass and predicts it.
 
 ```python
-from glance import load_problems, screen_teacher
+from answer_leakage import load_problems, screen_teacher
 
 problems = load_problems("data/problems/math.jsonl")
 report = screen_teacher("Qwen/Qwen3-8B", problems)
@@ -101,7 +101,7 @@ A few hundred problems is enough for the number to settle. Some models need a sy
 You do not have to adopt the pipeline to use the diagnostic. Any corpus of chains can be scored, whatever produced it.
 
 ```python
-from glance import score_corpus, answer_first_rate, delta_afr
+from answer_leakage import score_corpus, answer_first_rate, delta_afr
 
 score_corpus("my_distillation_set.jsonl")     # 47.4% (n=924/935)
 answer_first_rate(chains)                     # same thing, in memory
@@ -121,7 +121,7 @@ A chain counts as answer-first when its final answer already appears in the open
 The pieces are available individually if you want to build something else on them:
 
 ```python
-from glance import (build_prompt, answers_match, extract_boxed_answer,
+from answer_leakage import (build_prompt, answers_match, extract_boxed_answer,
                     is_answer_first, answer_first_fraction, think_block)
 
 build_prompt(question, gold, "derivefirst")   # any of the five conditions
@@ -217,11 +217,11 @@ Where a pipeline cannot avoid showing the gold answer, a derive-first instructio
 ## Repository layout
 
 ```
-glance/prompts.py       the five conditions; nohint against hint is the one bit
-glance/matching.py      keep-correct filter: boxed extraction and answer equivalence
-glance/signature.py     AFR and dAFR
-glance/corpus.py        corpus IO, arm pairing, scoring a file
-glance/generation.py    vLLM sampling and screen_teacher
+answer_leakage/prompts.py       the five conditions; nohint against hint is the one bit
+answer_leakage/matching.py      keep-correct filter: boxed extraction and answer equivalence
+answer_leakage/signature.py     AFR and dAFR
+answer_leakage/corpus.py        corpus IO, arm pairing, scoring a file
+answer_leakage/generation.py    vLLM sampling and screen_teacher
 scripts/generate_chains.py  sample one or both arms
 scripts/build_matched.py    pair the arms, print dAFR
 scripts/screen.py           screen a candidate teacher end to end
@@ -234,7 +234,7 @@ This covers the main experiment. The controls, the code-domain arm and the cross
 
 ## Notes
 
-**Two answer matchers, on purpose.** `glance.answers_match` is the generation-side keep-correct filter. `scripts/evaluate_math500.py` carries a slightly stricter variant that scores benchmark answers, and that one produced every accuracy in the paper. They agree on about 99.6% of MATH-500 answers: the evaluator asks `math_verify` first and returns its verdict, while the filter falls through to a numeric fallback that strips non-digit characters and so accepts a few pairs the evaluator rejects. Do not unify them without re-running every evaluation.
+**Two answer matchers, on purpose.** `answer_leakage.answers_match` is the generation-side keep-correct filter. `scripts/evaluate_math500.py` carries a slightly stricter variant that scores benchmark answers, and that one produced every accuracy in the paper. They agree on about 99.6% of MATH-500 answers: the evaluator asks `math_verify` first and returns its verdict, while the filter falls through to a numeric fallback that strips non-digit characters and so accepts a few pairs the evaluator rejects. Do not unify them without re-running every evaluation.
 
 ## Citation
 

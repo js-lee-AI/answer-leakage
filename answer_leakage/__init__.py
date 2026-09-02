@@ -5,12 +5,12 @@ Two entry points cover most uses.
 
 Score a corpus you already have:
 
-    from glance import score_corpus
+    from answer_leakage import score_corpus
     score_corpus("chains.jsonl")
 
 Compare the two arms of one generator:
 
-    from glance import delta_afr
+    from answer_leakage import delta_afr
     delta_afr(blind_chains, leaked_chains)
 
 Nothing above needs a GPU or a serving stack. Generation does, and imports vLLM
