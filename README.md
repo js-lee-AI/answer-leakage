@@ -1,21 +1,22 @@
 <div align="center">
 
-# GLANCE
+# Answer Leakage
 
 ### Read a teacher before you train on it
 
 <em>Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models</em>
 
+[![arXiv](https://img.shields.io/badge/arXiv-2607.14552-b31b1b.svg)](https://arxiv.org/abs/2607.14552)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
-[![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](#citation)
+[![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://arxiv.org/abs/2607.14552)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
-[![Stars](https://img.shields.io/github/stars/js-lee-AI/GLANCE?style=social)](https://github.com/js-lee-AI/GLANCE/stargazers)
+[![Stars](https://img.shields.io/github/stars/js-lee-AI/answer-leakage?style=social)](https://github.com/js-lee-AI/answer-leakage/stargazers)
 
 <img src="assets/framework.png" width="92%" alt="One generator, two prompts, the same correctness filter, the same SFT recipe" />
 
 <em>One generator, the same problems, the same correctness filter, the same SFT recipe. The two arms differ by one bit: whether the gold answer was visible when the chain was written.</em>
 
-<b><a href="#overview">Overview</a> · <a href="#install">Install</a> · <a href="#screen-a-teacher">Screen a teacher</a> · <a href="#score-a-corpus-you-already-have">Score a corpus</a> · <a href="#reproduce-the-one-bit-experiment">Reproduce</a> · <a href="#results">Results</a> · <a href="#citation">Citation</a></b>
+<b><a href="https://arxiv.org/abs/2607.14552">Paper</a> · <a href="#overview">Overview</a> · <a href="#install">Install</a> · <a href="#screen-a-teacher">Screen a teacher</a> · <a href="#score-a-corpus-you-already-have">Score a corpus</a> · <a href="#reproduce-the-one-bit-experiment">Reproduce</a> · <a href="#results">Results</a> · <a href="#citation">Citation</a></b>
 
 </div>
 
@@ -237,7 +238,19 @@ This covers the main experiment. The controls, the code-domain arm and the cross
 
 ## Citation
 
-The paper is on arXiv. The identifier and BibTeX entry will be added here once it is assigned.
+```bibtex
+@article{lee2026answerleakage,
+  title   = {Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning
+             Distillation in Large Language Models},
+  author  = {Lee, Jungseob and Lee, Seungyoon and Son, Suhyune and
+             Lee, Dongyub Jude and Han, Sungbin and Eo, Sugyeong and Lim, Heuiseok},
+  journal = {arXiv preprint arXiv:2607.14552},
+  eprint  = {2607.14552},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  year    = {2026}
+}
+```
 
 ## License
 
