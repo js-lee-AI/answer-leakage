@@ -7,6 +7,7 @@
 <em>Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models</em>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2607.14552-b31b1b.svg)](https://arxiv.org/abs/2607.14552)
+[![Project Page](https://img.shields.io/badge/Project-Page-152ec7.svg)](https://js-lee-ai.github.io/answer-leakage/)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper: CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://arxiv.org/abs/2607.14552)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
@@ -16,7 +17,7 @@
 
 <em>One generator, the same problems, the same correctness filter, the same SFT recipe. The two arms differ by one bit: whether the gold answer was visible when the chain was written.</em>
 
-<b><a href="https://arxiv.org/abs/2607.14552">Paper</a> · <a href="#overview">Overview</a> · <a href="#install">Install</a> · <a href="#screen-a-teacher">Screen a teacher</a> · <a href="#score-a-corpus-you-already-have">Score a corpus</a> · <a href="#reproduce-the-one-bit-experiment">Reproduce</a> · <a href="#results">Results</a> · <a href="#citation">Citation</a></b>
+<b><a href="https://js-lee-ai.github.io/answer-leakage/">Project Page</a> · <a href="https://arxiv.org/abs/2607.14552">Paper</a> · <a href="#overview">Overview</a> · <a href="#install">Install</a> · <a href="#screen-a-teacher">Screen a teacher</a> · <a href="#score-a-corpus-you-already-have">Score a corpus</a> · <a href="#reproduce-the-one-bit-experiment">Reproduce</a> · <a href="#results">Results</a> · <a href="#citation">Citation</a></b>
 
 </div>
 
