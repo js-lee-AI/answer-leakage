@@ -21,6 +21,12 @@
 
 </div>
 
+<p align="center">
+  <a href="https://js-lee-ai.github.io/answer-leakage/#race"><img src="assets/replay.gif" width="100%" alt="Two Qwen3-8B students answer one MATH-500 problem whose answer is -1. The student trained on blind chains first states its answer 33% into its thinking and answers -1 after 1,749 tokens. The student trained on leaked chains states an answer 1% into its thinking, marked in orange, and answers 2 after 8,298 tokens" /></a>
+</p>
+
+<p align="center"><em>Qwen3-8B fine-tuned on its own chains, orange is where each student first states its final answer. The <a href="https://js-lee-ai.github.io/answer-leakage/#race">project page</a> replays it live.</em></p>
+
 ---
 
 ## Overview
