@@ -22,10 +22,10 @@
 </div>
 
 <p align="center">
-  <a href="https://js-lee-ai.github.io/answer-leakage/#race"><img src="assets/replay.gif" width="100%" alt="Two Qwen3-8B students answer one MATH-500 problem whose answer is -1. The student trained on blind chains first states its answer 33% into its thinking and answers -1 after 1,749 tokens. The student trained on leaked chains states an answer 1% into its thinking, marked in orange, and answers 2 after 8,298 tokens" /></a>
+  <a href="https://js-lee-ai.github.io/answer-leakage/#race"><img src="assets/replay.gif" width="100%" alt="One training problem as the two arms of the one-bit experiment handle it. With the answer hidden the generator reads the problem alone, and its chain opens by recalling the difference of squares formula. With the answer shown the prompt adds a note that gives the gold answer 1505, marked in orange, and the chain names 1505 in its second sentence. The same filter keeps both chains and each arm fine-tunes Qwen3-8B on 935 kept chains. On MATH-500, where the base model scores 95.2, the student of the hidden arm scores 95.1 and the student of the shown arm scores 78.9, 16.2 points lower" /></a>
 </p>
 
-<p align="center"><em>Qwen3-8B fine-tuned on its own chains, orange is where each student first states its final answer. The <a href="https://js-lee-ai.github.io/answer-leakage/#race">project page</a> replays it live.</em></p>
+<p align="center"><em>Qwen3-8B fine-tuned on its own chains, orange is the gold answer. The <a href="https://js-lee-ai.github.io/answer-leakage/#race">project page</a> replays it live.</em></p>
 
 ---
 
