@@ -1,5 +1,6 @@
-"""GLANCE: measuring what answer-conditioned chains of thought do to a
-distillation corpus, and screening a teacher before you pay to train on it.
+"""Answer Leakage: measuring what answer-conditioned chains of thought do
+to a distillation corpus, and screening a teacher before you pay to train
+on it.
 
 Two entry points cover most uses.
 
